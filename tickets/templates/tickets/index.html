@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Movie Ticket Price Comparison</h2>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Cinema World Price</th>
+        <th>Film World Price</th>
+    </tr>
+    {% for movie in movies_data %}
+        <tr>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.cinemaWorldPrice }}</td>
+            <td>{{ movie.filmWorldPrice }}</td>                            
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

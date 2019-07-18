@@ -1,0 +1,17 @@
+[run]
+omit =
+  *apps.py,
+  *migrations/*,
+  *management/*,
+  *settings*,
+  *tests/*,
+  *venv*,
+  *urls.py,
+  *wsgi/*,
+  manage.py
+  movie/__init__.py
+  movie/wsgi.py
+  conftest.py
+  setup.py
+  wsgi.py
+  tickets/__init__.py

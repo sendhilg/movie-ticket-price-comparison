@@ -1,0 +1,13 @@
+__pycache__
+.pytest_cache
+*.pyc
+htmlcov
+.coverage
+.tox
+*.egg-info
+.vscode
+results.xml
+coverage.xml
+unittest-report
+*sqlite*
+*venv*
