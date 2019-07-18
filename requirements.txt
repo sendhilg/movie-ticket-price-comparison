@@ -1,0 +1,8 @@
+APScheduler==3.6.0
+Django==2.2.2
+requests==2.22.0
+requests-cache==0.5.0
+requests-mock==1.6.0
+
+pytest==4.6.2
+pytest-cov==2.7.1
