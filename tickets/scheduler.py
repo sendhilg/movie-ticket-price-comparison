@@ -21,7 +21,7 @@ def start():
     # - The job will execute a model class method at midnight each day
     # - replace_existing in combination with the unique ID prevents duplicate copies of the job
     scheduler.add_job(
-        update_movies_cache, "cron", id="update_movies_cache", minute="0,10,20,32,40,50,59", replace_existing=True
+        update_movies_cache, "cron", id="update_movies_cache", minute="0,15,45,59", replace_existing=True
     )
 
     scheduler.start()

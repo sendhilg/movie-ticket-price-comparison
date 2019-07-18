@@ -45,17 +45,19 @@ Setup a virtual environment for the application using virtualenv tool:
 
         $ pip -V
 
-After the virtual environment is created, use the package manager 'pip' to install 
+After the virtual environment is created and activated, use the package manager 'pip' to install 
 requirements for the application.
 
     $ pip install -r requirements.txt
 
 
 ## Launching the application locally:
-For the application to be able to retrieve data from the downstream API's, the API Access Key must be 
-provided in the http request headers 'x-access-token'.
 
-Create an environment variable called MOVIES_API_ACCESS_TOKEN and set it to the required access key value using the export(Linux) or set(Windows) command.
+Important:
+    For the application to be able to retrieve data from the downstream API's, the API Access Key must be 
+    provided by the application in the http request headers 'x-access-token'.
+
+    Create an environment variable called MOVIES_API_ACCESS_TOKEN and set it to the required access key value using the export(Linux) or set(Windows) command.
 
 Django web framework is used to develop this application. Run the below manage.py command to run the local server
 for the application:
