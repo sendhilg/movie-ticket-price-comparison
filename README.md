@@ -63,9 +63,9 @@ for the application:
 
     $ python manage.py runserver --noreload
 
-Copy the localhost address displayed on the console and launch the application using the below URL:
+Copy the localhost address displayed on the console and launch the application using the URL:
 
-    http://127.0.0.1:8000/tickets/price-comparison
+    http://127.0.0.1:8000/
 
 
 ### Example

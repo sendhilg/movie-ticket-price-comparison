@@ -70,7 +70,6 @@ def requests_with_retry(url, headers, retries=settings.NUMBER_OF_REQUEST_RETRIES
 
 
 def update_movies_cache():
-    requests_cache.clear()
     get_cinema_world_movies_details(get_cinema_world_movies())
     get_film_world_movies_details(get_film_world_movies())
 
