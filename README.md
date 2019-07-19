@@ -104,7 +104,6 @@ Caching data from the downstream API responses is achieved by below:
 ## Unit Tests
 
 ### Running unit tests
-Run the below commands at the project directory to run tests with code coverage. The test should fail if the 
-code coverage is under 75%.
+Run the below commands at the project directory 'movie-ticket-price-comparison' to run tests with code coverage. The test should fail if the code coverage is under 75%. Make sure that the name of python virtual environment created is added to the .coveragerc file so that the test coverage does not run against the virtual environment.
 
     $  pytest --cov=tickets --cov-report=term --cov-report=html --cov-fail-under=75 --no-cov-on-fail   --junitxml=unittest-report/xml/results.xml
