@@ -52,12 +52,11 @@ requirements for the application.
 
 
 ## Launching the application locally:
-
 Important:
     For the application to be able to retrieve data from the downstream API's, the API Access Key must be 
     provided by the application in the http request headers 'x-access-token'.
 
-    Create an environment variable called MOVIES_API_ACCESS_TOKEN and set it to the required access key value using the export(Linux) or set(Windows) command.
+    Create an environment variable called MOVIES_API_ACCESS_TOKEN and set it to the required access key value using the export (Linux) or set (Windows) command.
 
 Django web framework is used to develop this application. Run the below manage.py command to run the local server
 for the application:
@@ -82,6 +81,25 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 
 ```
+
+## Notes
+
+### Caching
+Caching data from the downstream API responses is achieved by below:
+
+    1. When the application is loaded i.e. the when the 'python manage.py runserver --noreload' command is executed.
+
+    2. As part a scheduled job set by using python APScheduler. The frequency is set to be 10 mins. 
+    
+    3. The cache is set to expire every 9 mins. This is set by the configuration settings.EXPIRE_CACHE_AFTER_SECONDS
+
+### Requests
+    1. Connection timeout is set by configuration settings.REQUEST_CONNECTION_TIMEOUT_SECONDS
+
+    2. Read timeout is set by the configuration settings.REQUEST_CONNECTION_TIMEOUT_SECONDS
+
+    3. Number of retries for requests is set by settings.NUMBER_OF_REQUEST_RETRIES
+
 
 ## Unit Tests
 
